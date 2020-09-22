@@ -1,11 +1,9 @@
-MySQL Master/Slave(s) with Docker (for Mac) containers
+Percona XtraDB Cluster with Docker containers
 ============================================
 
-Create a MySQL environment with Docker (for Mac). Single server or a Master and multiple slaves.
+Create a PXC environment with Docker. 3 nodes by default
 
-See the presentation at: https://gitpitch.com/nethalo/ansible-mysql-docker#/
-
-Requirements
+Requirements for Mac
 ------------
 
 - ansible 2.3.2.0 (The version that comes with `brew install ansible` will do just fine)
@@ -27,9 +25,9 @@ Role Variables
 Two main variables you need to know: **"servers"** and **"mysql_image_version"**. 
 
 **Servers** is the amount of containers you wish to deploy, is an integrer value. 
-**mysql_image_version** can have 2 options: 5.6 or 5.7.
+**mysql_image_version** can have 2 options: 5.7 or 8.0
 
-The default values are: servers=1 and mysql_image_version=5.6
+The default values are: servers=3 and mysql_image_version=5.7
 
 Example Playbook
 ----------------
@@ -45,7 +43,7 @@ There's just 1 role. To execute it, run a command as follow:
 ansible-playbook site.yml -i hosts --extra-vars "servers=5 mysql_image_version=5.7"
 ```
 
-In the above case, 1 Master and 4 Slaves will be deployed, using MySQL 5.7 (Percona images)
+In the above case, 3-node Galera cluster will be deployed, using Percona XtraDB Cluster 5.7 (Percona images)
 
 License
 -------
