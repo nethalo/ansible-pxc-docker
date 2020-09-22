@@ -1,0 +1,3 @@
+---
+# vars file for containers
+   docker_network_name: mysql

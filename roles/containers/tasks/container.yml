@@ -1,0 +1,13 @@
+---
+- name: Create containers
+  docker_container:
+      name: pxc1
+      image: "percona/percona-xtradb-cluster:{{ mysql_image_version }}"
+      hostname: pxc1
+      detach: yes
+      networks:
+        - name: "{{ docker_network_name }}"
+      env:
+        MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+        CLUSTER_NAME: "dani-pxc-docker"
+

@@ -1,0 +1,15 @@
+---
+- name: Copy my.cnf global
+  template:
+    src: my.cnf.j2
+    dest: "{{ role_path }}/my.cnf.mysql{{ item }}"
+    force: yes
+  with_sequence: start=1 end="{{ servers }}"
+
+- name: Set server_id
+  ini_file:
+    path: "{{ role_path }}/my.cnf.mysql{{ item }}"
+    option: server-id
+    value: "{{ item }}"
+    section: mysqld
+  with_sequence: start=1 end="{{ servers }}"

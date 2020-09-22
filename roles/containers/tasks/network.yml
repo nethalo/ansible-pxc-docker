@@ -1,0 +1,4 @@
+---
+- name: Set the docker network for the containers
+  docker_network:
+    name: "{{ docker_network_name }}"

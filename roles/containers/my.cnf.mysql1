@@ -1,0 +1,14 @@
+# Ansible managed
+
+[mysqld]
+
+server-id = 1
+
+log_bin = mysql-bin
+log-bin-index = mysql-bin.index
+expire_logs_days = 1
+max_binlog_size = 10M
+binlog_format = ROW
+
+relay-log = relay-bin
+relay-log-index = relay-bin.index
