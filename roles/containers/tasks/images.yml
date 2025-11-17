@@ -3,7 +3,5 @@
 - name: Pull the MySQL (Percona) Images
   docker_image:
      name: percona/percona-xtradb-cluster
-     tag: "{{ item }}"
-  with_items:
-    - "5.7"
+     tag: "{{ mysql_image_version }}"
 
