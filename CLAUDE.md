@@ -3,7 +3,7 @@
 ## Project Overview
 
 **Purpose:** Automated deployment of Percona XtraDB Cluster (PXC) using Docker containers
-**Author:** Daniel Guzman Burgos (daniel.guzman.burgos at percona.com)
+**Author:** Daniel Guzman Burgos (nethalo at gmail.com)
 **License:** BSD 2-Clause
 **Target Platform:** macOS with Docker for Mac
 **Ansible Version:** 2.3.2.0+
