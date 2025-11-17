@@ -1,7 +1,7 @@
 ---
 # defaults file for containers
-  servers: 3 
-  mysql_image_version: 5.7
+  servers: 3
+  mysql_image_version: 8.0.43
 
 # cnf template
   mysql_server_id: 1
